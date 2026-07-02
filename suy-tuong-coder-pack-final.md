@@ -219,8 +219,8 @@ Suy tưởng bản Nhã Nam 2026 được thiết kế như một ấn bản kin
 - Bản dịch mới của Đinh Hồng Phúc.
 - Dựa theo bản tiếng Anh của George Long, có tham khảo nguyên bản Hy Lạp.
 - Sách dày 368 trang.
-- Ruột sách in 2 màu.
-- Có 13 tranh minh họa mới.
+- Ruột sách in màu.
+- Có 13 tranh minh họa mới do họa sĩ trẻ Phạm Viết Nam thực hiện.
 - Mỹ thuật lấy tinh thần cổ điển, với bảng màu đỏ rượu vang, ngà, đen và vàng kim.
 - Bố cục trang trong thoáng, phù hợp với kiểu đọc chậm, gạch chân, quay lại.
 
@@ -229,12 +229,12 @@ Suy tưởng bản Nhã Nam 2026 được thiết kế như một ấn bản kin
 BẢN THƯỜNG  
 220.000đ
 
-Dành cho người muốn đọc một bản Suy tưởng mới, đẹp, in 2 màu, có minh họa, phù hợp để đọc và quay lại nhiều lần.
+Dành cho người muốn đọc một bản Suy tưởng mới, đẹp, in màu, có minh họa, phù hợp để đọc và quay lại nhiều lần.
 
 Thông tin chính:
 - 368 trang.
-- In 2 màu.
-- 13 tranh minh họa mới.
+- In màu.
+- 13 tranh minh họa mới do họa sĩ trẻ Phạm Viết Nam thực hiện.
 - Bìa mềm.
 - Phù hợp với người đọc muốn có một bản Suy tưởng đẹp, dễ đọc, dễ mang theo.
 
@@ -368,7 +368,7 @@ Mobile:
 
 - Use interior mockups.
 - Use image + text alternating layout.
-- Show "in 2 màu", "13 tranh minh họa mới", "368 trang" as refined stat blocks.
+- Show "in màu", "13 tranh minh họa mới do họa sĩ trẻ Phạm Viết Nam thực hiện", "368 trang" as refined stat blocks.
 
 ### 7.7 Two editions comparison
 
@@ -460,7 +460,7 @@ Page title:
 Suy tưởng - Marcus Aurelius | Bản Nhã Nam 2026
 
 Meta description:
-Suy tưởng của Marcus Aurelius, bản dịch mới của Đinh Hồng Phúc, in 2 màu, 13 tranh minh họa mới. Bản thường 220.000đ và bản đặc biệt giới hạn 333 bản dành cho người sưu tầm.
+Suy tưởng của Marcus Aurelius, bản dịch mới của Đinh Hồng Phúc, in màu, 13 tranh minh họa mới do họa sĩ trẻ Phạm Viết Nam thực hiện. Bản thường 220.000đ và bản đặc biệt giới hạn 333 bản dành cho người sưu tầm.
 
 Open Graph:
 
@@ -489,9 +489,9 @@ If not supported, skip and report.
 Suggested alt texts:
 
 - Cover image: "Bìa sách Suy tưởng của Marcus Aurelius bản Nhã Nam 2026"
-- Illustration: "Tranh minh họa hai màu trong sách Suy tưởng"
+- Illustration: "Tranh minh họa in màu của họa sĩ Phạm Viết Nam trong sách Suy tưởng"
 - Interior mockup 1: "Trang trong minh họa của sách Suy tưởng"
-- Interior mockup 2: "Trang ruột in hai màu của sách Suy tưởng"
+- Interior mockup 2: "Trang ruột in màu của sách Suy tưởng"
 - Author image: "Marcus Aurelius"
 - Translator image: "Dịch giả Đinh Hồng Phúc"
 

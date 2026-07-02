@@ -15,8 +15,8 @@ const quotes = [
 
 const standardEdition = [
   "368 trang.",
-  "In 2 màu.",
-  "13 tranh minh họa mới.",
+  "In màu.",
+  "13 tranh minh họa mới do họa sĩ trẻ Phạm Viết Nam thực hiện.",
   "Bìa mềm.",
   "Phù hợp với người đọc muốn có một bản Suy tưởng đẹp, dễ đọc, dễ mang theo."
 ];
@@ -35,7 +35,7 @@ const productSchema = {
   "@type": "Product",
   name: "Suy tưởng - Marcus Aurelius",
   description:
-    "Suy tưởng của Marcus Aurelius, bản dịch mới của Đinh Hồng Phúc, in 2 màu, 13 tranh minh họa mới.",
+    "Suy tưởng của Marcus Aurelius, bản dịch mới của Đinh Hồng Phúc, in màu, 13 tranh minh họa mới do họa sĩ trẻ Phạm Viết Nam thực hiện.",
   brand: {
     "@type": "Brand",
     name: "Nhã Nam"
@@ -68,7 +68,7 @@ const productSchema = {
     <title>Suy tưởng - Marcus Aurelius | Bản Nhã Nam 2026</title>
     <meta
       name="description"
-      content="Suy tưởng của Marcus Aurelius, bản dịch mới của Đinh Hồng Phúc, in 2 màu, 13 tranh minh họa mới. Bản thường 220.000đ và bản đặc biệt giới hạn 333 bản dành cho người sưu tầm."
+      content="Suy tưởng của Marcus Aurelius, bản dịch mới của Đinh Hồng Phúc, in màu, 13 tranh minh họa mới do họa sĩ trẻ Phạm Viết Nam thực hiện. Bản thường 220.000đ và bản đặc biệt giới hạn 333 bản dành cho người sưu tầm."
     />
     <meta property="og:title" content="Suy tưởng - Marcus Aurelius" />
     <meta
@@ -125,7 +125,7 @@ const productSchema = {
             />
             <div class="spec-row" aria-label="Thông số ấn bản">
               <div class="spec-pill"><strong>368</strong>trang</div>
-              <div class="spec-pill"><strong>2</strong>màu ruột</div>
+              <div class="spec-pill"><strong>In</strong>màu</div>
               <div class="spec-pill"><strong>13</strong>minh họa mới</div>
             </div>
           </aside>
@@ -272,8 +272,8 @@ const productSchema = {
               <p>Dựa theo bản tiếng Anh của George Long, có tham khảo nguyên bản Hy Lạp.</p>
             </article>
             <article class="essay-card" data-reveal>
-              <h3>Ruột sách in 2 màu</h3>
-              <p>Sách dày 368 trang, có 13 tranh minh họa mới và bố cục trang trong thoáng.</p>
+              <h3>Ruột sách in màu</h3>
+              <p>Sách dày 368 trang, có 13 tranh minh họa mới do họa sĩ trẻ Phạm Viết Nam thực hiện và bố cục trang trong thoáng.</p>
             </article>
             <article class="essay-card" data-reveal>
               <h3>Mỹ thuật cổ điển</h3>
@@ -282,13 +282,13 @@ const productSchema = {
           </div>
           <div class="gallery" aria-label="Ảnh minh họa trong sách">
             <figure class="plate" data-reveal>
-              <img src={asset("open-illustration-3.jpg")} alt="Tranh minh họa hai màu trong sách Suy tưởng" width="1102" height="1614" loading="lazy" />
+              <img src={asset("open-illustration-3.jpg")} alt="Tranh minh họa in màu của họa sĩ Phạm Viết Nam trong sách Suy tưởng" width="1102" height="1614" loading="lazy" />
             </figure>
             <figure class="plate" data-reveal>
-              <img src={asset("open-illustration-5.jpg")} alt="Trang minh họa trong sách Suy tưởng" width="1102" height="1614" loading="lazy" />
+              <img src={asset("open-illustration-5.jpg")} alt="Trang minh họa của họa sĩ Phạm Viết Nam trong sách Suy tưởng" width="1102" height="1614" loading="lazy" />
             </figure>
             <figure class="plate" data-reveal>
-              <img src={asset("open-illustration-8.jpg")} alt="Trang ruột minh họa trong sách Suy tưởng" width="1102" height="1614" loading="lazy" />
+              <img src={asset("open-illustration-8.jpg")} alt="Trang ruột minh họa của họa sĩ Phạm Viết Nam trong sách Suy tưởng" width="1102" height="1614" loading="lazy" />
             </figure>
           </div>
         </div>
@@ -312,7 +312,7 @@ const productSchema = {
                 </div>
                 <p class="price">220.000đ</p>
               </div>
-              <p>Dành cho người muốn đọc một bản Suy tưởng mới, đẹp, in 2 màu, có minh họa, phù hợp để đọc và quay lại nhiều lần.</p>
+              <p>Dành cho người muốn đọc một bản Suy tưởng mới, đẹp, in màu, có minh họa, phù hợp để đọc và quay lại nhiều lần.</p>
               <ul>
                 {standardEdition.map((detail) => <li>{detail}</li>)}
               </ul>
