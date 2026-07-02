@@ -1,0 +1,489 @@
+---
+import "../styles/global.css";
+import CTAButton from "../components/CTAButton.astro";
+
+const ORDER_URL = "{{ORDER_URL}}";
+const CTA_LABEL = "ĐẶT SÁCH TRÊN WEBSITE NHÃ NAM";
+const asset = (name: string) => `/assets/suy-tuong/${name}`;
+
+const quotes = [
+  "Nếu một việc khó tự mình hoàn thành, đừng cho rằng nó là điều bất khả đối với con người. Nhưng điều gì khả thi đối với con người và phù hợp với bản tính của y, hãy nghĩ rằng ngươi cũng có thể đạt được nó.",
+  "Nghệ thuật sống giống với nghệ thuật của một đô vật hơn là của một vũ công, ở chỗ nó phải sẵn sàng và vững vàng để đối mặt với những đòn tấn công bất ngờ và không lường trước.",
+  "Và nếu thiên hạ không tin rằng anh ta đang sống một đời giản dị, khiêm nhường và biết đủ, anh ta cũng chẳng tức giận với ai trong số họ, cũng không rời xa con đường dẫn đến điểm cuối cuộc đời - nơi con người phải bước đến một cách thanh sạch, an nhiên, sẵn sàng rời đi, không chút ép buộc, hoàn toàn hòa giải với số phận của mình.",
+  "Mỗi khi ngươi làm bất cứ điều gì, hãy dừng lại và tự hỏi: liệu cái chết có thực sự đáng sợ chỉ vì nó lấy đi điều này khỏi ngươi?"
+];
+
+const standardEdition = [
+  "368 trang.",
+  "In 2 màu.",
+  "13 tranh minh họa mới.",
+  "Bìa mềm.",
+  "Phù hợp với người đọc muốn có một bản Suy tưởng đẹp, dễ đọc, dễ mang theo."
+];
+
+const specialEdition = [
+  "Bìa cứng carton nhập ngoại.",
+  "Ruột in giấy ngà định lượng 100gsm.",
+  "Bụng sách mạ nhũ vàng.",
+  "Đánh số từ 1 đến 333.",
+  "Đóng triện Nhã Nam.",
+  "Có chữ ký dịch giả Đinh Hồng Phúc."
+];
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: "Suy tưởng - Marcus Aurelius",
+  description:
+    "Suy tưởng của Marcus Aurelius, bản dịch mới của Đinh Hồng Phúc, in 2 màu, 13 tranh minh họa mới.",
+  brand: {
+    "@type": "Brand",
+    name: "Nhã Nam"
+  },
+  image: asset("open-cover-front.jpg"),
+  offers: [
+    {
+      "@type": "Offer",
+      name: "Bản thường",
+      price: "220000",
+      priceCurrency: "VND",
+      url: ORDER_URL
+    },
+    {
+      "@type": "Offer",
+      name: "Bản đặc biệt",
+      price: "490000",
+      priceCurrency: "VND",
+      url: ORDER_URL
+    }
+  ]
+};
+---
+
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Suy tưởng - Marcus Aurelius | Bản Nhã Nam 2026</title>
+    <meta
+      name="description"
+      content="Suy tưởng của Marcus Aurelius, bản dịch mới của Đinh Hồng Phúc, in 2 màu, 13 tranh minh họa mới. Bản thường 220.000đ và bản đặc biệt giới hạn 333 bản dành cho người sưu tầm."
+    />
+    <meta property="og:title" content="Suy tưởng - Marcus Aurelius" />
+    <meta
+      property="og:description"
+      content="Một ấn bản Suy tưởng để đọc chậm và giữ lâu. Bản dịch mới của Đinh Hồng Phúc, có bản đặc biệt giới hạn 333 bản."
+    />
+    <meta property="og:image" content={asset("open-cover-front.jpg")} />
+    <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brandmark" href="#top" aria-label="Suy tưởng">
+          <span>S</span>
+          <span>Suy tưởng</span>
+        </a>
+        <button class="menu-btn" type="button" aria-label="Mở menu" aria-expanded="false">☰</button>
+        <nav class="navlinks" aria-label="Điều hướng chính">
+          <a href="#private">Cuốn sách</a>
+          <a href="#today">Đọc hôm nay</a>
+          <a href="#translation">Bản dịch</a>
+          <a href="#editions">Ấn bản</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy" data-reveal>
+            <p class="eyebrow">Nhã Nam 2026 · Bản dịch mới</p>
+            <div class="title-lockup">
+              <h1 id="hero-title">Suy tưởng</h1>
+              <p class="subtitle">Marcus Aurelius · Meditations</p>
+            </div>
+            <p class="lead">
+              Một văn bản gần 2.000 năm tuổi, được làm lại như một ấn bản để đọc chậm và giữ lâu. Bản dịch mới của Đinh Hồng Phúc, dựa theo bản tiếng Anh của George Long, có tham khảo nguyên bản Hy Lạp.
+            </p>
+            <p>
+              Suy tưởng không bắt đầu như một cuốn sách dành cho công chúng. Marcus Aurelius viết những ghi chép này cho chính mình, giữa chiến trận, chính sự, bệnh tật, bổn phận và sự hữu hạn của đời người. Ông không viết để thuyết phục ai phải sống thế nào; ông viết để tự nhắc mình không rời khỏi điều đúng, ngay cả khi đang nắm trong tay quyền lực lớn nhất.
+            </p>
+            <div class="hero-actions">
+              <CTAButton href={ORDER_URL} label={CTA_LABEL} />
+              <p class="edition-note">Bản thường để đọc. Bản đặc biệt để giữ.</p>
+            </div>
+          </div>
+          <aside class="cover-stage" data-reveal>
+            <img
+              src={asset("open-cover-front.jpg")}
+              alt="Bìa sách Suy tưởng của Marcus Aurelius bản Nhã Nam 2026"
+              width="1655"
+              height="1168"
+              fetchpriority="high"
+            />
+            <div class="spec-row" aria-label="Thông số ấn bản">
+              <div class="spec-pill"><strong>368</strong>trang</div>
+              <div class="spec-pill"><strong>2</strong>màu ruột</div>
+              <div class="spec-pill"><strong>13</strong>minh họa mới</div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="private" aria-labelledby="private-title">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">I · Một cuốn sách riêng tư</p>
+            <div>
+              <h2 id="private-title">Một cuốn sách không được viết để xuất bản</h2>
+              <p class="lead">Suy tưởng thuộc về một trường hợp hiếm hơn: những ghi chép riêng tư của một người đang tự rèn mình.</p>
+            </div>
+          </div>
+          <div class="essay-grid">
+            <article class="essay-card" data-reveal>
+              <h3>Không phải một hoàng đế đang ra lệnh</h3>
+              <p>Marcus Aurelius là hoàng đế La Mã, nhưng trong những trang viết này, điều hiện ra trước hết không phải một người cai trị, mà là một con người liên tục đối diện với chính mình.</p>
+              <p>Ông tự nhắc mình về giận dữ, danh vọng, khoái lạc, cái chết, sự bấp bênh của thân xác, bổn phận trước cộng đồng và cách giữ cho linh hồn không bị kéo lệch bởi những thứ nằm ngoài quyền kiểm soát.</p>
+            </article>
+            <article class="essay-card" data-reveal>
+              <h3>Không chiều chuộng người đọc</h3>
+              <p>Gần 2.000 năm sau, Suy tưởng vẫn còn được đọc vì nó không chiều chuộng người đọc. Cuốn sách không hứa hẹn đời sống nhẹ hơn. Nó nhắc ta sống tỉnh táo hơn.</p>
+              <p>Cuốn sách này hợp với nhịp đọc chậm: đọc từng đoạn, gạch chân, đặt xuống, rồi quay lại. Có những câu chỉ mở ra sau vài năm.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="today" aria-labelledby="today-title">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">II · Đọc hôm nay</p>
+            <div>
+              <h2 id="today-title">Vì sao đọc Suy tưởng hôm nay?</h2>
+              <p class="lead">Vì có những điều con người hiện đại tưởng là mới, nhưng Marcus đã nhìn thấy từ rất lâu.</p>
+            </div>
+          </div>
+          <div class="essay-card essay-card--wide" data-reveal>
+            <p>Nỗi sợ bị quên lãng. Cơn giận trước sự ngu dốt của người khác. Áp lực phải chứng minh bản thân. Sự mong manh của danh tiếng. Cảm giác bị kéo đi bởi những việc không nằm trong tay mình. Suy tưởng không đưa ra công thức giải quyết nhanh, nhưng nó đặt người đọc vào một cuộc đối thoại nghiêm khắc: nếu không thể kiểm soát tất cả những gì xảy đến, ta còn có thể kiểm soát điều gì?</p>
+            <p>Đây là cuốn sách để đọc từng đoạn, gạch chân, đặt xuống, rồi quay lại. Có những câu chỉ mở ra sau vài năm. Có những đoạn đọc ở tuổi hai mươi là một lời khuyên, đến tuổi ba mươi lại thành một lời cảnh tỉnh.</p>
+          </div>
+          <div class="theme-grid">
+            <article class="theme-card" data-reveal>
+              <span class="roman">I</span>
+              <div>
+                <h3>Danh vọng</h3>
+                <p>Sự mong manh của tiếng tăm và nhu cầu được nhìn nhận.</p>
+              </div>
+            </article>
+            <article class="theme-card" data-reveal>
+              <span class="roman">II</span>
+              <div>
+                <h3>Giận dữ</h3>
+                <p>Cách con người giữ mình trước ngu dốt, va chạm và tự ái.</p>
+              </div>
+            </article>
+            <article class="theme-card" data-reveal>
+              <span class="roman">III</span>
+              <div>
+                <h3>Cái chết</h3>
+                <p>Một giới hạn buộc mọi điều quan trọng trở nên rõ hơn.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="excerpt" class="quote-section" aria-labelledby="excerpt-title">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">III · Trích đoạn</p>
+            <div>
+              <h2 id="excerpt-title">Những câu nên dừng lại</h2>
+              <p class="lead">Chọn một câu, đọc chậm, rồi để nó va vào ngày sống của mình.</p>
+            </div>
+          </div>
+          <div class="quote-panel" data-reveal>
+            <div>
+              <blockquote class="quote-text" id="quoteText">{quotes[0]}</blockquote>
+              <div class="quote-controls" aria-label="Chọn trích đoạn">
+                {quotes.map((quote, index) => (
+                  <button
+                    class="quote-dot"
+                    type="button"
+                    aria-label={`Hiển thị trích đoạn ${index + 1}`}
+                    aria-pressed={index === 0 ? "true" : "false"}
+                    data-quote={index}
+                    data-quote-text={quote}
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </button>
+                ))}
+              </div>
+            </div>
+            <aside class="quote-aside">
+              <p>Không nên đọc Suy tưởng như một cuốn sổ trích dẫn. Đây là một văn bản có nhịp điệu riêng: lúc ngắn gọn, lúc nghiêm khắc, lúc gần như một lời tự vấn.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="translation" aria-labelledby="translation-title">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">IV · Bản dịch</p>
+            <div>
+              <h2 id="translation-title">Bản dịch mới của Đinh Hồng Phúc</h2>
+              <p class="lead">Với một văn bản kinh điển, bản dịch không phải chi tiết phụ.</p>
+            </div>
+          </div>
+          <div class="people-grid">
+            <article class="portrait-card" data-reveal>
+              <img src={asset("open-dinh-hong-phuc.jpg")} alt="Dịch giả Đinh Hồng Phúc" width="322" height="483" loading="lazy" />
+              <div class="portrait-meta">
+                <p class="eyebrow">Dịch giả</p>
+                <h3>Đinh Hồng Phúc</h3>
+                <p>Dịch giả / Giảng viên Trường Đại học Thủ Dầu Một</p>
+              </div>
+            </article>
+            <div class="translator-copy" data-reveal>
+              <p>Suy tưởng bản Nhã Nam 2026 được dịch giả Đinh Hồng Phúc thực hiện, dựa theo bản tiếng Anh của George Long, có tham khảo nguyên bản Hy Lạp. Lựa chọn này giúp bản dịch giữ được tinh thần cổ điển của văn bản, đồng thời đưa những suy tưởng của Marcus Aurelius đến gần hơn với người đọc Việt Nam hôm nay.</p>
+              <p>Đinh Hồng Phúc hiện là giảng viên Trường Đại học Thủ Dầu Một, từng là nghiên cứu viên tại Viện Khoa học Xã hội vùng Nam Bộ, tốt nghiệp Thạc sĩ Triết học tại Trường Đại học Khoa học Xã hội và Nhân văn, ĐHQG-HCM. Anh là dịch giả và đồng dịch giả của nhiều đầu sách thuộc lĩnh vực triết học, tư tưởng, khoa học xã hội và lịch sử, trong đó có Tư duy phản biện dành cho sinh viên, Thuyết hiện sinh là một thuyết nhân bản, Nhập môn Marx, Đế chế La Mã, Nhập môn xã hội học, Lý thuyết nhân loại học – giới thiệu lịch sử, Từ điển Kant, Các quy tắc của phương pháp xã hội học.</p>
+              <p>Anh cũng là người sáng lập và quản lý website triết học triethoc.edu.vn, đồng thời là Giám đốc Chương trình Tư duy biện luận và Phương pháp nghiên cứu khoa học tại Đại học Thủ Dầu Một.</p>
+              <p>Bản dịch lần này hướng đến việc giữ lại cảm giác một người đang nói với chính mình, không lên bục giảng, không trình diễn sự thông thái.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="edition-value-title">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">V · Ấn bản</p>
+            <div>
+              <h2 id="edition-value-title">Một ấn bản được làm để giữ lâu</h2>
+              <p class="lead">Suy tưởng bản Nhã Nam 2026 được thiết kế như một ấn bản kinh điển có thể đặt trên bàn đọc, đọc chậm và quay lại nhiều lần.</p>
+            </div>
+          </div>
+          <div class="edition-proof">
+            <article class="essay-card" data-reveal>
+              <h3>Bản dịch mới</h3>
+              <p>Dựa theo bản tiếng Anh của George Long, có tham khảo nguyên bản Hy Lạp.</p>
+            </article>
+            <article class="essay-card" data-reveal>
+              <h3>Ruột sách in 2 màu</h3>
+              <p>Sách dày 368 trang, có 13 tranh minh họa mới và bố cục trang trong thoáng.</p>
+            </article>
+            <article class="essay-card" data-reveal>
+              <h3>Mỹ thuật cổ điển</h3>
+              <p>Bảng màu đỏ rượu vang, ngà, đen và vàng kim, nối trực tiếp với tinh thần bìa và tranh minh họa.</p>
+            </article>
+          </div>
+          <div class="gallery" aria-label="Ảnh minh họa trong sách">
+            <figure class="plate" data-reveal>
+              <img src={asset("open-illustration-3.jpg")} alt="Tranh minh họa hai màu trong sách Suy tưởng" width="1102" height="1614" loading="lazy" />
+            </figure>
+            <figure class="plate" data-reveal>
+              <img src={asset("open-illustration-5.jpg")} alt="Trang minh họa trong sách Suy tưởng" width="1102" height="1614" loading="lazy" />
+            </figure>
+            <figure class="plate" data-reveal>
+              <img src={asset("open-illustration-8.jpg")} alt="Trang ruột minh họa trong sách Suy tưởng" width="1102" height="1614" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="editions" aria-labelledby="editions-title">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">VI · Hai phiên bản</p>
+            <div>
+              <h2 id="editions-title">Bản thường để đọc. Bản đặc biệt để giữ.</h2>
+              <p class="lead">Hai lựa chọn cùng giữ tinh thần ấn bản kinh điển: một bản để đọc thường xuyên, một bản giới hạn để sưu tầm.</p>
+            </div>
+          </div>
+          <div class="edition-grid">
+            <article class="edition-card" data-reveal>
+              <div class="edition-top">
+                <div>
+                  <p class="eyebrow">Bản thường</p>
+                  <h3>Để đọc</h3>
+                </div>
+                <p class="price">220.000đ</p>
+              </div>
+              <p>Dành cho người muốn đọc một bản Suy tưởng mới, đẹp, in 2 màu, có minh họa, phù hợp để đọc và quay lại nhiều lần.</p>
+              <ul>
+                {standardEdition.map((detail) => <li>{detail}</li>)}
+              </ul>
+            </article>
+            <article class="edition-card is-active" data-reveal>
+              <div class="edition-top">
+                <div>
+                  <p class="eyebrow">Giới hạn 333 bản</p>
+                  <h3>Bản đặc biệt</h3>
+                </div>
+                <p class="price">490.000đ</p>
+              </div>
+              <p>Dành cho người sưu tầm và những bạn thích sách đẹp.</p>
+              <ul>
+                {specialEdition.map((detail) => <li>{detail}</li>)}
+              </ul>
+            </article>
+          </div>
+          <div class="section-action" data-reveal>
+            <CTAButton href={ORDER_URL} label={CTA_LABEL} />
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="author-title">
+        <div class="container">
+          <div class="people-grid">
+            <article class="portrait-card" data-reveal>
+              <img src={asset("open-marcus-aurelius.jpg")} alt="Marcus Aurelius" width="3000" height="4000" loading="lazy" />
+              <div class="portrait-meta">
+                <p class="eyebrow">Tác giả</p>
+                <h3>Marcus Aurelius</h3>
+                <p>121–180</p>
+              </div>
+            </article>
+            <div class="translator-copy" data-reveal>
+              <h2 id="author-title">Không ghi lại hình ảnh một hoàng đế đang ra lệnh</h2>
+              <p>Marcus Aurelius là một trong những hoàng đế vĩ đại nhất của Đế quốc La Mã, đồng thời là một trong những gương mặt quan trọng của chủ nghĩa Khắc kỷ. Ông cai trị trong một thời kỳ đầy chiến tranh, dịch bệnh, biến động chính trị và những áp lực không ngừng của quyền lực.</p>
+              <p>Nhưng Suy tưởng không ghi lại hình ảnh một hoàng đế đang ra lệnh. Cuốn sách cho thấy một con người đang tự nhắc mình sống đúng: khiêm nhường hơn trước danh tiếng, vững vàng hơn trước biến cố, tỉnh táo hơn trước cơn giận, và sẵn sàng hơn trước cái chết.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="read-title">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">VII · Cách đọc</p>
+            <div>
+              <h2 id="read-title">Đọc cuốn sách này như thế nào?</h2>
+              <p class="lead">Đừng đọc Suy tưởng như một cuốn sách cần đọc liền mạch để “xong”. Cũng đừng chỉ đọc nó như một kho quote để lưu lại vài câu hay.</p>
+            </div>
+          </div>
+          <div class="theme-grid">
+            <article class="theme-card" data-reveal>
+              <span class="roman">I</span>
+              <div>
+                <h3>Đọc từng đoạn</h3>
+                <p>Có thể đọc mỗi ngày một đoạn, như một bài tập nhỏ về sự chú ý.</p>
+              </div>
+            </article>
+            <article class="theme-card" data-reveal>
+              <span class="roman">II</span>
+              <div>
+                <h3>Dừng lại</h3>
+                <p>Mở sách vào những lúc thấy mình bị kéo đi bởi giận dữ, lo âu, tự ái, tham vọng hoặc mệt mỏi.</p>
+              </div>
+            </article>
+            <article class="theme-card" data-reveal>
+              <span class="roman">III</span>
+              <div>
+                <h3>Quay lại</h3>
+                <p>Nhiều đoạn không cần ta đồng ý ngay; chúng cần ta sống thêm một chút, rồi đọc lại.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="audience-title">
+        <div class="container">
+          <div class="section-head" data-reveal>
+            <p class="eyebrow">VIII · Độc giả</p>
+            <div>
+              <h2 id="audience-title">Dành cho ai?</h2>
+              <p class="lead">Cuốn sách này dành cho người muốn đọc Marcus Aurelius trực tiếp, không chỉ qua những câu trích dẫn trên mạng.</p>
+            </div>
+          </div>
+          <div class="essay-grid">
+            <article class="essay-card" data-reveal>
+              <h3>Người đọc nghiêm túc</h3>
+              <p>Dành cho người quan tâm đến triết học Khắc kỷ, nhưng không muốn dừng lại ở các diễn giải quá đơn giản.</p>
+              <p>Dành cho người thích những cuốn sách có thể ở lại lâu trên bàn đọc.</p>
+            </article>
+            <article class="essay-card" data-reveal>
+              <h3>Người chọn sách để tặng hoặc giữ</h3>
+              <p>Dành cho người muốn tặng một cuốn sách nghiêm túc, đẹp và có trọng lượng.</p>
+              <p>Suy tưởng có thể không hợp với người tìm một cuốn sách dễ đọc theo kiểu hướng dẫn từng bước. Marcus Aurelius không viết công thức. Ông để lại một cuộc tự vấn.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing-cta" aria-labelledby="closing-title">
+        <div class="container cta-grid">
+          <div data-reveal>
+            <p class="eyebrow">IX · Suy tưởng</p>
+            <h2 id="closing-title">Một ấn bản Suy tưởng để đọc chậm, gạch chân và quay lại.</h2>
+          </div>
+          <div class="cta-card" data-reveal>
+            <p>Bản thường dành cho người muốn đọc. Bản đặc biệt 333 bản dành cho người muốn giữ.</p>
+            <CTAButton href={ORDER_URL} label={CTA_LABEL} />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>Suy tưởng · Marcus Aurelius · Bản dịch mới của Đinh Hồng Phúc · Nhã Nam 2026</p>
+      </div>
+    </footer>
+
+    <script>
+      (() => {
+        const menuButton = document.querySelector(".menu-btn");
+        const navLinks = document.querySelector(".navlinks");
+        if (menuButton && navLinks) {
+          menuButton.addEventListener("click", () => {
+            const open = navLinks.classList.toggle("is-open");
+            menuButton.setAttribute("aria-expanded", String(open));
+          });
+          navLinks.addEventListener("click", (event) => {
+            if (event.target instanceof HTMLAnchorElement) {
+              navLinks.classList.remove("is-open");
+              menuButton.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        const quoteText = document.getElementById("quoteText");
+        document.querySelectorAll("[data-quote]").forEach((button) => {
+          button.addEventListener("click", () => {
+            if (quoteText instanceof HTMLElement) {
+              quoteText.textContent = button.getAttribute("data-quote-text") || "";
+            }
+            document.querySelectorAll("[data-quote]").forEach((item) => {
+              item.setAttribute("aria-pressed", String(item === button));
+            });
+          });
+        });
+
+        const revealItems = Array.from(document.querySelectorAll("[data-reveal]"));
+        if (!("IntersectionObserver" in window)) {
+          revealItems.forEach((item) => item.classList.add("is-visible"));
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+        );
+        revealItems.forEach((item) => observer.observe(item));
+      })();
+    </script>
+  </body>
+</html>

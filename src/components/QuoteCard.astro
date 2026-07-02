@@ -1,0 +1,12 @@
+---
+interface Props {
+  quote: string;
+  wide?: boolean;
+}
+
+const { quote, wide = false } = Astro.props;
+---
+
+<blockquote class:list={["quote-card", { "quote-card--wide": wide }]}>
+  <p>{quote}</p>
+</blockquote>

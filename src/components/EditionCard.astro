@@ -1,0 +1,22 @@
+---
+interface Props {
+  name: string;
+  price: string;
+  description: string;
+  details: string[];
+  featured?: boolean;
+  badge?: string;
+}
+
+const { name, price, description, details, featured = false, badge } = Astro.props;
+---
+
+<article class:list={["edition-card", { "edition-card--featured": featured }]}>
+  {badge && <p class="edition-card__badge">{badge}</p>}
+  <h3>{name}</h3>
+  <p class="edition-card__price">{price}</p>
+  <p>{description}</p>
+  <ul>
+    {details.map((detail) => <li>{detail}</li>)}
+  </ul>
+</article>

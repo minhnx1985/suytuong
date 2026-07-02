@@ -1,0 +1,13 @@
+---
+interface Props {
+  tone?: "light" | "dark";
+}
+
+const { tone = "dark" } = Astro.props;
+---
+
+<div class={`ornament ornament--${tone}`} aria-hidden="true">
+  <span></span>
+  <i></i>
+  <span></span>
+</div>
