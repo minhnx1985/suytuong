@@ -141,14 +141,18 @@ Meditations
 Bản dịch mới của Đinh Hồng Phúc  
 Dựa theo bản tiếng Anh của George Long, có tham khảo nguyên bản Hy Lạp.
 
-Một văn bản gần 2.000 năm tuổi, được làm lại như một ấn bản để đọc chậm và giữ lâu.
+Một văn bản gần 2.000 năm tuổi, nay trở lại trong ấn bản Nhã Nam 2026, để đọc chậm, gạch chân và giữ lâu.
 
-Suy tưởng không bắt đầu như một cuốn sách dành cho công chúng. Marcus Aurelius viết những ghi chép này cho chính mình, giữa chiến trận, chính sự, bệnh tật, bổn phận và sự hữu hạn của đời người. Ông không viết để thuyết phục ai phải sống thế nào; ông viết để tự nhắc mình không rời khỏi điều đúng, ngay cả khi đang nắm trong tay quyền lực lớn nhất.
+Marcus Aurelius không viết những dòng này để trở thành tác giả. Ông viết cho chính mình: giữa chiến trận, chính sự, bệnh tật, bổn phận và ý nghĩ thường trực về cái chết. Ở giữa quyền lực lớn nhất La Mã, ông quay lại một câu hỏi rất nhỏ mà cũng rất khó: làm sao giữ mình không bị kéo lệch khỏi điều đúng?
 
-Bản thường để đọc. Bản đặc biệt để giữ.
+Bản thường để đọc hằng ngày.  
+Bản đặc biệt để giữ như một ấn bản sưu tầm.
 
 CTA button:
 ĐẶT SÁCH TRÊN WEBSITE NHÃ NAM
+
+Secondary CTA:
+XEM HAI PHIÊN BẢN
 
 ### SECTION 1 — MỘT CUỐN SÁCH KHÔNG ĐƯỢC VIẾT ĐỂ XUẤT BẢN
 

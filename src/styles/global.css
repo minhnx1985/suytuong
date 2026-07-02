@@ -237,6 +237,17 @@ li + li {
   border-color: var(--accent-hover);
 }
 
+.btn-secondary {
+  background: color-mix(in oklab, var(--surface), transparent 12%);
+  border-color: color-mix(in oklab, var(--accent), transparent 28%);
+  color: var(--accent);
+}
+
+.btn-secondary:hover {
+  background: color-mix(in oklab, var(--accent), transparent 88%);
+  border-color: var(--accent);
+}
+
 .eyebrow {
   color: var(--accent);
   font-family: var(--font-mono);
